@@ -2,8 +2,22 @@
 
 A premium **Bulk SMS Broadcasting** web application built with **Spring Boot** + **MySQL**.
 
-## Live Demo
-> 🌐 Deployed on Render — link coming after first deployment
+---
+
+## ⚡ One-Click Run on Any Windows PC
+
+Open **PowerShell** on any PC and paste this single command — it will automatically clone, build, and open BulkSend in your browser:
+
+```powershell
+irm https://raw.githubusercontent.com/kapoorva1710/bulksend/master/run.ps1 | iex
+```
+
+> **Requirements:** [Git](https://git-scm.com) · [Java 17+](https://adoptium.net) · [Maven](https://maven.apache.org/download.cgi)
+
+---
+
+## 🌐 Live Demo
+> Deployed on Render — link coming after first deployment
 
 ## Features
 - 📋 Manage contacts (add manually or upload via CSV)
@@ -19,7 +33,23 @@ A premium **Bulk SMS Broadcasting** web application built with **Spring Boot** +
 | Frontend | HTML, CSS, Vanilla JS |
 | Hosting | Render (Docker) |
 
-## Local Setup
+---
+
+## 🌿 Branch Strategy
+
+| Branch | Purpose |
+|---|---|
+| `master` | Stable, production-ready code |
+| `dev` | Active development — make changes here, then PR to master |
+
+**Workflow:**
+```
+dev  →  (test & verify)  →  master  →  auto-deploys to Render
+```
+
+---
+
+## Local Setup (Manual)
 
 1. **Clone the repo**
    ```bash
@@ -27,7 +57,7 @@ A premium **Bulk SMS Broadcasting** web application built with **Spring Boot** +
    cd bulksend
    ```
 
-2. **Set environment variables** (or edit `application.properties`):
+2. **Set environment variables**
    ```bash
    export DB_URL=jdbc:mysql://localhost:3306/bulksend
    export DB_USERNAME=root
@@ -41,9 +71,9 @@ A premium **Bulk SMS Broadcasting** web application built with **Spring Boot** +
    mvn spring-boot:run
    ```
 
-4. **Open in browser**: [http://localhost:8081/dashboard.html](http://localhost:8081/dashboard.html)
+4. **Open in browser:** [http://localhost:8081/dashboard.html](http://localhost:8081/dashboard.html)
+
+---
 
 ## Deploy to Render
-Click the button below to deploy to Render in one click:
-
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
