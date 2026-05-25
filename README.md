@@ -9,7 +9,7 @@ A premium **Bulk SMS Broadcasting** web application built with **Spring Boot** +
 Open **PowerShell** on any PC and paste this single command — it will automatically clone, build, and open BulkSend in your browser:
 
 ```powershell
-irm https://raw.githubusercontent.com/kapoorva1710/bulksend/master/run.ps1 | iex
+irm https://raw.githubusercontent.com/kapoorva1710/bulksend/master/run.ps1 -OutFile "$env:TEMP\bulksend.ps1"; powershell -File "$env:TEMP\bulksend.ps1"
 ```
 
 > **Requirements:** [Git](https://git-scm.com) · [Java 17+](https://adoptium.net) · [Maven](https://maven.apache.org/download.cgi)
