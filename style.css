@@ -1,0 +1,47 @@
+:root {
+    --bg: #0f172a;
+    --card: rgba(255,255,255,0.08);
+    --text: white;
+}
+
+.light {
+    --bg: #f5f5f7;
+    --card: rgba(0,0,0,0.05);
+    --text: black;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    font-family: -apple-system;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background: #3b82f6;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}

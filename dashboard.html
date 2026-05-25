@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BulkSend</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>BulkSend</h1>
+
+<div class="container">
+
+<div class="card">
+<h3>Add Contact</h3>
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<button onclick="addContact()">Add</button>
+</div>
+
+<div class="card">
+<h3>Contacts</h3>
+<ul id="contacts"></ul>
+</div>
+
+<div class="card">
+<h3>Upload CSV</h3>
+<input type="file" id="file">
+<button onclick="upload()">Upload</button>
+</div>
+
+<div class="card">
+<h3>Create Campaign</h3>
+<textarea id="message" placeholder="Write your message"></textarea>
+<button onclick="sendCampaign()">Send Message</button>
+</div>
+
+<div class="card">
+<h3>Campaigns</h3>
+<ul id="campaigns"></ul>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

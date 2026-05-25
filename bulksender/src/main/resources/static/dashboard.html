@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BulkSend | Premium Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <main class="dashboard-wrapper">
+        <header class="app-header">
+            <h1 class="gradient-text">BulkSend</h1>
+            <p class="subtitle">Broadcast your messages with ease</p>
+        </header>
+
+        <div class="container">
+
+            <!-- Section 1: Contacts Management -->
+            <div class="column">
+                <div class="card glass">
+                    <div class="card-header">
+                        <h3><span class="icon">👤</span> Add Contact</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" id="name" placeholder="Enter full name" autocomplete="off">
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" placeholder="Enter phone number" autocomplete="off">
+                        </div>
+                        <button class="btn-primary" onclick="addContact()">
+                            <span>Add Contact</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card glass upload-card">
+                    <div class="card-header">
+                        <h3><span class="icon">📁</span> Upload CSV</h3>
+                    </div>
+                    <div class="card-body">
+                        <label for="file" class="file-upload-label">
+                            <div class="file-upload-design">
+                                <span class="upload-icon">⬆️</span>
+                                <p>Click to choose CSV file</p>
+                            </div>
+                            <input type="file" id="file" class="hidden-input">
+                        </label>
+                        <button class="btn-secondary" onclick="upload()">
+                            <span>Upload Contacts</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card glass list-card">
+                    <div class="card-header">
+                        <h3><span class="icon">📋</span> Contact List</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="contacts" class="styled-list">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Campaign Management -->
+            <div class="column">
+                <div class="card glass compose-card">
+                    <div class="card-header">
+                        <h3><span class="icon">✉️</span> Create Campaign</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <textarea id="message" placeholder="Type your broadcast message here..." rows="6"></textarea>
+                        </div>
+                        <button class="btn-primary pulse" onclick="sendCampaign()">
+                            <span>🚀 Send Broadcast</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card glass list-card">
+                    <div class="card-header">
+                        <h3><span class="icon">📊</span> Recent Campaigns</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="campaigns" class="styled-list">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // File upload visual feedback
+        document.getElementById('file').addEventListener('change', function(e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'Click to choose CSV file';
+            document.querySelector('.file-upload-design p').textContent = fileName;
+            document.querySelector('.file-upload-design').style.borderColor = 'var(--primary)';
+        });
+    </script>
+</body>
+</html>
