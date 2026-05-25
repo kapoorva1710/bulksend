@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: bulksend
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/contacts
+    envVars:
+      - key: DB_URL
+        fromDatabase:
+          name: bulksend-db
+          property: connectionString
+      - key: DB_USERNAME
+        fromDatabase:
+          name: bulksend-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: bulksend-db
+          property: password
+      - key: PORT
+        value: 8081
+
+databases:
+  - name: bulksend-db
+    plan: free
+    databaseName: bulksend
